@@ -112,6 +112,28 @@ input {
     }
 }
 
+.comments {
+    position: absolute;
+    display: flex;
+    height: 80px;
+    width: 20%;
+    color: rgb(31, 31, 31);
+    background: white;
+    border-radius: 10px;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+}
+.comments img {
+    height: 80%;
+    padding: 2.5%;
+}
+.comments p {
+    margin: 0;
+    margin-top: 5px;
+    font-family: "Poppins";
+}
+
 @media screen and (max-width: 700px) {
     .cont {
         margin-top: 30%;
@@ -150,26 +172,8 @@ input {
         width: 50px;
         float: right;
     }
+    .comments {
+        display: none;
+    }
     
-}
-.comments {
-    position: absolute;
-    display: flex;
-    height: 80px;
-    width: 20%;
-    color: rgb(31, 31, 31);
-    background: white;
-    border-radius: 10px;
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-}
-.comments img {
-    height: 80%;
-    padding: 2.5%;
-}
-.comments p {
-    margin: 0;
-    margin-top: 5px;
-    font-family: "Poppins";
 }
