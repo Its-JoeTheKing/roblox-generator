@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@600&family=Roboto:wght@500');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@600&family=Roboto:wght@500&family=Cairo');
 * {
     font-family: "Roboto";
 }
@@ -44,7 +44,7 @@ input {
     color: white;
     width: 80%;
     margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 10px;
     text-align: center;
     justify-content: center;
 }
@@ -60,18 +60,31 @@ input {
     border: 2px solid rgba(226, 226, 226, 0.7);
     width: 30%;
     margin-left: 35%;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
     height: 60px;
-    background: white;
-    color: black;
+    background: rgb(47, 231, 0);
+    color: rgb(0, 142, 207);
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
     font-family: "poppins";
+    animation: bigup 1s linear infinite;
+}
+@keyframes bigup {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .btn1:hover {
     transition: 1s;
     cursor: pointer;
-    box-shadow: 0px 0px 20px 1px white;
+    box-shadow: 0px 0px 10px 1px white;
+    animation: none;
 }
 .amounts {
     width: 100%;
@@ -98,55 +111,85 @@ input {
 .rob {
     width: 70%;
 }
-.loading {
-    margin-top: 5%;
-    height: 50%;
-    animation: spin 2s linear infinite ;
+.gen {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: rgb(31, 235, 13);
+    font-family: "Cairo";
 }
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+#done {
+    font-family: "Cairo";
 }
-
 .comments {
-    position: absolute;
     display: flex;
-    height: 80px;
-    width: 20%;
+    height: 90px;
+    width: 40%;
     color: rgb(31, 31, 31);
     background: white;
     border-radius: 10px;
-    top: 0;
-    right: 0;
     margin-top: 10px;
+    align-content: center;
+    font-family: "Cairo";
+}
+#verify {
+    color: blueviolet;
+    font-size: 18px;
 }
 .comments img {
-    height: 80%;
-    padding: 2.5%;
+    height: 100%;
 }
 .comments p {
     margin: 0;
     margin-top: 5px;
     font-family: "Poppins";
 }
-
+.inline {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+}
+.hum {
+    background: rgb(201, 0, 0);
+    color: white;
+}
 @media screen and (max-width: 700px) {
     .cont {
         margin-top: 30%;
         width: 90%;
         height: 70%;
     }
+    #con1 {
+        height: 90%;
+    }
+    #loading {
+        height: 60%;
+    }
+    html {
+        overflow: hidden;
+    }
     body {
-        background: rgb(245, 63, 93);
+        background: red;
+        overflow: hidden;
     }
-    input {
-        height: 50px;
-        width: 70%;
+    .logo {
+        width: 60%;
     }
+    h1 {
+        font-size: 22px;
+    }
+    
+    .comments {
+        margin-left: 10%;
+        width: 80%;
+    }
+    .gen {
+        width: 80%;
+    }
+    .hum {
+        margin-bottom: 20%;
+    } 
     .btn1 {
         width: 50%;
         margin-left: 25%;
@@ -172,8 +215,15 @@ input {
         width: 50px;
         float: right;
     }
-    .comments {
+    .inline {
+        display: block;
+        width: 100%;
+    }
+    .in4 {
         display: none;
     }
-    
+    h1, p {
+        width: 80%;
+        margin-left: 10%;
+    }
 }
